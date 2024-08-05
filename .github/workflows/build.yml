@@ -27,7 +27,7 @@ jobs:
         run: |
           if [ ${{ matrix.build_type }} == 'cernet' ]; then
             echo "NEXT_PUBLIC_SITE_HOST=help.mirrors.cernet.edu.cn" > .env.local
-            echo "NEXT_PUBLIC_JSON_ENDPOINT=https://mirrors.cernet.edu.cn/static/json/legacy-pack.json" >> .env.local
+            echo "NEXT_PUBLIC_JSON_ENDPOINT=https://cors.quickso.cn/?https://mirrors.cernet.edu.cn/static/json/legacy-pack.json" >> .env.local
             echo "NEXT_PUBLIC_MIRROZ_HOST=mirrors.cernet.edu.cn" >> .env.local
           else
             echo "Unexpected build type: ${{ matrix.build_type }}"
